@@ -34,9 +34,9 @@
     #00000080
   );
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
+  --primary-rgb: #0a5ed4;
+  --secondary-rgb: #faf377;
+  --white: #fff;
   --card-border-rgb: 131, 134, 135;
 }
 

@@ -1,0 +1,62 @@
+.headerContainer{
+    width: 100%;
+    height: calc( 100% - 100px );
+    margin-bottom: 20vh;
+}
+
+.headerContainer a{
+    display: flex;
+    justify-content: center;
+}
+
+.headerDescription{
+    display: flex;
+    flex-direction: row;
+    font-size: 3vw;
+}
+
+.headerDescription{
+    margin: 5vh 0 15vh 10vw;
+    width: 60vw;
+    font-family: var(--font-mono);
+}
+
+.highlightWord{
+    font-weight: 700;
+    color: var(--primary-rgb);
+}
+
+.circle{
+    filter: blur(100px);
+    transform: translate(100px, 100px);
+}
+.ctaContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cta{
+    background: var(--primary-rgb);
+    border-radius: 50%;
+    width: 60px;
+    transition:  all 0.3s ease-out;
+}
+
+.icons{
+    filter: invert(1);
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+    .cta:hover{
+        transform: translateY(10px);
+    }
+
+    .icons svg:hover{
+        transform: translateY(5px);
+    }
+}
