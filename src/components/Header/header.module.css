@@ -16,7 +16,7 @@
 }
 
 .headerDescription{
-    margin: 5vh 0 15vh 10vw;
+    margin: 5vh 0 15vh 0;
     width: 60vw;
     font-family: var(--font-mono);
 }
@@ -40,6 +40,7 @@
     background: var(--primary-rgb);
     border-radius: 50%;
     width: 60px;
+    cursor: pointer;
     transition:  all 0.3s ease-out;
 }
 

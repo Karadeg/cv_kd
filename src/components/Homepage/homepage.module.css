@@ -1,20 +1,64 @@
 .main {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
+    padding: 5rem 15rem;
     min-height: calc( 100vh - 100px);
+  }
+
+  .centerContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 15rem;
   }
   
   .photosContainer{
+    width: auto;
+    height: calc(100vh - 200px);
+    position: relative;
+
+    margin: 100px 0;
+    overflow-x: visible;
+  }
+
+  .highway{
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .highway_slider{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    height: 100vh;
+  }
+
+  .highway_barrier{
+    overflow: hidden;
+    position: relative;
+  }
+
+  .highway_lane{
+    display: flex;
+    height: 100%;
+    width: calc( 370px * 10 );
+  }
+
+  @keyframes translateinfinite {
+    100% { transform:translateX(calc(-370px * 5));  }
   }
   
-  .imageContainer{
-    width: 100px;
-    height: 100px;
+  .highway_car{
+    flex: 1;
+    display: flex;
+    margin-left: 70px;
+    width: 300px;
+    animation: translateinfinite 5s linear infinite;
   }
   
   .image{
     position: static!important;
+    object-fit: "contain"!important;
+    cursor: pointer;
   }

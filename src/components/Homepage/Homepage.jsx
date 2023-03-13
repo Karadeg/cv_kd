@@ -11,21 +11,56 @@ export default function Homepage() {
   return (
     <>
       <NavBar/>
-      <main className={styles.main}>
+      <div className={styles.main}>
         <Header photoRefContainer={photoRefContainer}/>
-        <div ref={photoRefContainer} className={styles.photosContainer}>
-          <div className={styles.imageContainer}>
-            <Image
-              className={styles.image}
-              src="/paris.JPG"
-              fill="true"
-            ></Image>
-          </div>
+      </div>
+      <div ref={photoRefContainer} className={styles.photosContainer}>
+        <div className={styles.centerContainer}>
+          <h1>Photographies</h1>
         </div>
-        <div id='photosContainer' >
+        <section>
+          <div className={styles.highway_slider}>
+            <div class={styles.highway_barrier}>
+              <div class={styles.highway_lane}>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
 
-        </div>
-      </main>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+                <div className={styles.highway_car}>
+                  <Image className={styles.image} src="/paris.JPG" width={300} height={450} ></Image>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id='photosContainer' >
+
+      </div>
     </>
   )
 }
