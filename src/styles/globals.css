@@ -1,13 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+  --font-mono: Oxygen, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -17,25 +13,15 @@
     #0071ff33 160deg,
     transparent 360deg
   );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  --font-paragraph-size: 1.5rem;
+  --font-h3-size: 2rem;
+  --font-paragraph-line-height: 1.8rem;
 
-  --primary-rgb: #0a5ed4;
-  --secondary-rgb: #faf377;
+  --font-typo-dark-theme: #7E8BAC;
+  --font-typo-hover-dark-theme: #a1b6ea;
+  --primary-rgb: #FFD465;
+  --secondary-rgb: #061332;
   --white: #fff;
   --card-border-rgb: 131, 134, 135;
 }
@@ -95,7 +81,7 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-h1{
+.subtitle{
   font-weight: 700;
   font-size: 3vw;
   color: var(--primary-rgb);
@@ -105,6 +91,36 @@ h1{
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.cursor {
+  position: absolute;
+  height: var(--circle);
+  width: var(--circle);
+  transform:scale(1);
+  border-radius: 50%;
+  transition: all 0.35s, top 0s, left 0s;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cursor:first-child {
+  background-color: #fff;
+  --circle:8px
+}
+.cursor.second-cursor {
+  background-color: none;
+  border:1.5px solid #fff;
+  --circle:68px;
+}
+
+.cursor:first-child.big{
+  --circle:140px;
+}
+.second-cursor.big { 
+  --circle:0px;
+  border-width:0px;
 }
 
 @media (prefers-color-scheme: dark) {

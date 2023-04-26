@@ -8,7 +8,11 @@
   .centerContainer{
     display: flex;
     flex-direction: column;
-    padding: 5rem 15rem;
+    padding: 0 0 5rem 15rem;
+  }
+
+  .headerContainer{
+    background: url("/Random.PNG") var(--secondary-rgb);
   }
   
   .photosContainer{
@@ -18,6 +22,11 @@
 
     margin: 100px 0;
     overflow-x: visible;
+  }
+
+  .photos_highway{
+    position: absolute;
+    bottom: 0;
   }
 
   .highway{
@@ -41,24 +50,66 @@
 
   .highway_lane{
     display: flex;
-    height: 100%;
-    width: calc( 370px * 10 );
+    height: auto;
+    width: calc( 450px * 10 );
+    animation: translateinfinite 20s linear infinite;
   }
 
   @keyframes translateinfinite {
-    100% { transform:translateX(calc(-370px * 5));  }
+    100% { transform:translateX(calc(-450px * 5));  }
+  }
+
+  .highway_lane:hover{
+    animation-play-state: paused;
   }
   
   .highway_car{
     flex: 1;
     display: flex;
-    margin-left: 70px;
-    width: 300px;
-    animation: translateinfinite 5s linear infinite;
+    margin-left: 100px;
+    width: 350px;
+    transition: all 0.3s;
+    background: linear-gradient(#0000, #0000);
+  }
+
+  .highway_car .photo_title{
+    position: absolute;
+    bottom: 0;
+    width: 350px;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .photo_title p {
+    position: inherit;
+    bottom: -100%;
+    font-family: var(--font-mono);
+    font-size: 3vw;
+    font-weight: 700;
+    color: white;
+    transition: all 0.3s;
+    clip-path: polygon(0 0, 350px 0, 350px 350px, 0 350px);
+  }
+
+  .highway_car:hover{
+    background: linear-gradient(#0000, #000A);
+  }
+
+  .highway_car:hover .photo_title{
+    transform: scale(1.3);
+  }
+
+  .highway_car:hover p{
+    bottom: 10%;
+  }
+
+  .highway_car:hover .image{
+    transform: scale(1.3);
   }
   
   .image{
     position: static!important;
     object-fit: "contain"!important;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
   }

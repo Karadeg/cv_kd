@@ -1,7 +1,6 @@
 .headerContainer{
     width: 100%;
     height: calc( 100% - 100px );
-    margin-bottom: 20vh;
 }
 
 .headerContainer a{
@@ -10,25 +9,43 @@
 }
 
 .headerDescription{
+    position: relative;
     display: flex;
-    flex-direction: row;
-    font-size: 3vw;
+    flex-direction: column;
+    margin: 5vh 0 25vh 0;
+    width: 50vw;
+    font-family: var(--font-mono);
+    color: var(--font-typo-dark-theme);
 }
 
-.headerDescription{
-    margin: 5vh 0 15vh 0;
-    width: 60vw;
-    font-family: var(--font-mono);
+.paragraphDark{
+    font-size: var(--font-paragraph-size);
+    line-height: var(--font-paragraph-line-height);
+}
+
+.mainTitle{
+    font-size: var(--font-h3-size);
+    font-weight: bold;
+    color: var(--white);
+    margin: 10px 0;
 }
 
 .highlightWord{
     font-weight: 700;
-    color: var(--primary-rgb);
+    color: var(--secondary-rgb);
+    background: var(--primary-rgb);
+    height: 3rem;
+    padding: 10px 20px;
+    border-radius: 0.5rem;
+    margin-left: 10px;
 }
 
 .circle{
-    filter: blur(100px);
-    transform: translate(100px, 100px);
+    position: absolute;
+    filter: blur(360px);
+    opacity: 20%;
+    top:-40%;
+    pointer-events: none;
 }
 .ctaContainer{
     width: 100%;
@@ -45,7 +62,6 @@
 }
 
 .icons{
-    filter: invert(1);
     width: 60px;
     height: 60px;
     padding: 10px;

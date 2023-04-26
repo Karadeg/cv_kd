@@ -12,9 +12,8 @@ export default function NavBar () {
         >
         </Image>
         <div className={styles.menuIconsContainer}>
-          <Link href="#designsContainer">DESIGN</Link>
-          <Link href="#photosContainer">PHOTOS</Link>
-          <Link href="#photosContainer">CONTACT</Link>
+          <Link href="#projetsContainer">Projets</Link>
+          <Link href="#contactContainer">Contact</Link>
         </div>
       </div>
     )

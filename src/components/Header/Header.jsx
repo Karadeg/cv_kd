@@ -10,13 +10,13 @@ export default function Header({photoRefContainer}) {
     return (
         <div className={styles.headerContainer}>
           <div className={styles.headerDescription}>
-            <p>
-              Hey ! Je suis <span className={styles.highlightWord}>Karadeg Daucé</span>, développeur FullStack et passionné de <span className={styles.highlightWord}>design</span> et de <span className={styles.highlightWord}>photos</span>.
-            </p>
-            <svg viewBox="0 0 400 400" className={styles.circle}>
-              <circle cx = "200" cy = "200" r = "150" fill = "#0a5ed4"/>
-            </svg>
+            <p className={styles.paragraphDark}>Hey !</p>
+            <p className={styles.mainTitle}>Je m'appelle<span className={styles.highlightWord}>Karadeg</span></p>
+            <p className={styles.paragraphDark}>Étudiant à l'ESEO et futur ingénieur logiciel spécialisé dans le front. Actuellement en dernière année, je suis en alternance chez Thales et me prépare à ma sortie d'école. Je suis ouvert à toutes propositions, n'hésitez pas à me contacter</p>
           </div>
+          <svg viewBox="0 0 400 400" className={styles.circle}>
+              <circle cx = "200" cy = "200" r = "100" fill = "#FFD465"/>
+            </svg>
           <div className={styles.ctaContainer}>
             <a className={styles.cta} onClick={handleClick}>
               <Image

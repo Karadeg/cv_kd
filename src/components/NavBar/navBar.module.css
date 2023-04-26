@@ -18,4 +18,11 @@
   .menuIconsContainer a{
     padding: 0.3rem;
     margin: 0 1rem;
+    color: var(--font-typo-dark-theme);
+
+    transition: all 0.3s;
+  }
+
+  .menuIconsContainer a:hover{
+    color: var(--font-typo-hover-dark-theme);
   }
